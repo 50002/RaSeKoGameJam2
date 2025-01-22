@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dhigfwof0stt8" path="res://six_shot.tscn" id="2_mlph4"]
 [ext_resource type="PackedScene" path="res://kill.tscn" id="3_hoj7u"]
 [ext_resource type="PackedScene" uid="uid://d0cvqhnes0rav" path="res://Agis.tscn" id="5_mqyhg"]
-[ext_resource type="PackedScene" uid="uid://jyxaxpsg8lxr" path="res://enemy.tscn" id="8_exnpg"]
+[ext_resource type="PackedScene" uid="uid://bfuqmldviyxhd" path="res://enemy.tscn" id="8_exnpg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym2ry"]
 texture = ExtResource("1_iar4r")
@@ -372,12 +372,12 @@ curve = SubResource("Curve2D_b3wc1")
 [node name="boolet_spwnPoints" type="PathFollow2D" parent="Path2D"]
 position = Vector2(-256, -152)
 
-[node name="CharacterBody2D" parent="Path2D" instance=ExtResource("8_exnpg")]
-position = Vector2(101, -59)
-
 [node name="Attack" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("8_exnpg")]
+position = Vector2(78, -199)
 
 [connection signal="timeout" from="Score" to="." method="_on_score_timeout"]
 [connection signal="timeout" from="Score" to="CharacterBody2D" method="_on_score_timeout"]

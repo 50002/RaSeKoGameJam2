@@ -166,40 +166,22 @@ collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_xb3lm")
 
-[node name="bullet" parent="." instance=ExtResource("1_84kb1")]
+[node name="bullet7" parent="." instance=ExtResource("1_84kb1")]
 rotation = -3.14159
-collision_layer = 1
-collision_mask = 1
-script = null
 
-[node name="bullet2" parent="." instance=ExtResource("1_84kb1")]
-rotation = -2.09439
-collision_layer = 1
-collision_mask = 1
-script = null
+[node name="bullet8" parent="." instance=ExtResource("1_84kb1")]
+rotation = -2.0944
 
-[node name="bullet3" parent="." instance=ExtResource("1_84kb1")]
+[node name="bullet9" parent="." instance=ExtResource("1_84kb1")]
 rotation = -1.0472
-collision_layer = 1
-collision_mask = 1
-script = null
 
-[node name="bullet4" parent="." instance=ExtResource("1_84kb1")]
-rotation = 2.0944
-collision_layer = 1
-collision_mask = 1
-script = null
+[node name="bullet10" parent="." instance=ExtResource("1_84kb1")]
 
-[node name="bullet5" parent="." instance=ExtResource("1_84kb1")]
-collision_layer = 1
-collision_mask = 1
-script = null
-
-[node name="bullet6" parent="." instance=ExtResource("1_84kb1")]
+[node name="bullet11" parent="." instance=ExtResource("1_84kb1")]
 rotation = 1.0472
-collision_layer = 1
-collision_mask = 1
-script = null
+
+[node name="bullet12" parent="." instance=ExtResource("1_84kb1")]
+rotation = 2.0944
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_eiy1k")
