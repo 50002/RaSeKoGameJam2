@@ -1,8 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://camk6c00ydsl1"]
+[gd_scene load_steps=43 format=3 uid="uid://d0cvqhnes0rav"]
 
 [ext_resource type="Texture2D" uid="uid://cm6vagujdg7q2" path="res://PreAssets/Agis/Agis.png" id="1_1os55"]
 [ext_resource type="Script" path="res://agis.gd" id="1_moplt"]
-[ext_resource type="PackedScene" uid="uid://db052i0nc4s0" path="res://bullet.tscn" id="3_kugab"]
+[ext_resource type="PackedScene" uid="uid://dx7pk1cr7evji" path="res://bullet.tscn" id="3_kugab"]
 [ext_resource type="Texture2D" uid="uid://bcohi3leo2rxg" path="res://PreAssets/Agis/Particle FX 1.2 Free/Spritesheets/Gravity-Sheet.png" id="4_2qufk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yerjx"]
@@ -284,14 +284,20 @@ disabled = true
 [node name="bullet" parent="CollisionShape2D/FanAttack" instance=ExtResource("3_kugab")]
 visible = false
 position = Vector2(4, -94)
+collision_layer = 1
+collision_mask = 1
 
 [node name="bullet2" parent="CollisionShape2D/FanAttack" instance=ExtResource("3_kugab")]
 visible = false
 position = Vector2(-135, 74)
+collision_layer = 1
+collision_mask = 1
 
 [node name="bullet3" parent="CollisionShape2D/FanAttack" instance=ExtResource("3_kugab")]
 visible = false
 position = Vector2(-155, 74)
+collision_layer = 1
+collision_mask = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 position = Vector2(3.5, -97)

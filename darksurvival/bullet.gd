@@ -7,7 +7,7 @@ func _ready() -> void:
 	lock_rotation = true
 	#liike
 
-	linear_velocity = Vector2(0.0, -100.0).rotated(rotation)
+	linear_velocity = Vector2(0.0, 100.0).rotated(rotation)
 
 	
 func _on_timer_timeout() -> void:
