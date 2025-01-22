@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cdhlmspr1q7iy"]
+[gd_scene load_steps=8 format=4 uid="uid://cdhlmspr1q7iy"]
 
 [ext_resource type="Texture2D" uid="uid://ckbgmihmh5sku" path="res://PreAssets/free.png" id="1_iar4r"]
+[ext_resource type="Script" path="res://game.gd" id="1_n621x"]
 [ext_resource type="PackedScene" uid="uid://dekojcd44bhjd" path="res://PreAssets/RHood.tscn" id="2_je5ht"]
+[ext_resource type="PackedScene" uid="uid://buyueaw6dfu1" path="res://kill.tscn" id="3_hoj7u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym2ry"]
 texture = ExtResource("1_iar4r")
@@ -300,6 +302,7 @@ sources/0 = SubResource("TileSetAtlasSource_ym2ry")
 size = Vector2(96, 5)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_n621x")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_33mpf")
@@ -378,3 +381,9 @@ one_way_collision = true
 position = Vector2(576, -110)
 shape = SubResource("RectangleShape2D_ey16o")
 one_way_collision = true
+
+[node name="Area2D" parent="." instance=ExtResource("3_hoj7u")]
+position = Vector2(0, 224)
+
+[node name="Score" type="Timer" parent="."]
+autostart = true
