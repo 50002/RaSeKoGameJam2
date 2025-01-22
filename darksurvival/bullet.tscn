@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://db052i0nc4s0"]
+[gd_scene load_steps=26 format=3 uid="uid://db052i0nc4s0"]
 
+[ext_resource type="Script" path="res://bullet.gd" id="1_fawsl"]
 [ext_resource type="Texture2D" uid="uid://b78k6ixhd7ste" path="res://PreAssets/Agis/pixil-frame-0.png" id="1_y003i"]
 [ext_resource type="Texture2D" uid="uid://cvw6roupg78o7" path="res://PreAssets/Agis/Particle FX 1.2 Free/Spritesheets/Fire+Sparks-Sheet.png" id="2_al26w"]
 
@@ -144,8 +145,16 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dxb4s"]
+a = Vector2(-1, -19)
+b = Vector2(-1, 6)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e25yr"]
+radius = 4.0
+
 [node name="bullet" type="RigidBody2D"]
 gravity_scale = 0.0
+script = ExtResource("1_fawsl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_y003i")
@@ -156,5 +165,25 @@ show_behind_parent = true
 position = Vector2(-3, 19)
 scale = Vector2(0.447917, 0.40625)
 sprite_frames = SubResource("SpriteFrames_8yshc")
-frame_progress = 0.659552
+autoplay = "default"
+frame_progress = 0.267605
 flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_dxb4s")
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -4)
+shape = SubResource("CapsuleShape2D_e25yr")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

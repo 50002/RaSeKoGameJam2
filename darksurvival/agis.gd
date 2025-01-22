@@ -18,4 +18,4 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_attack_timeout() -> void:
-	$CollisionShape2D/FanAttack/bullet.rotate(player.position)
+	pass
