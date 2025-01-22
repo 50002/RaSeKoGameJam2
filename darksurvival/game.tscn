@@ -293,7 +293,8 @@ texture = ExtResource("1_iar4r")
 5:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_33mpf"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 128
+physics_layer_0/collision_mask = 128
 sources/0 = SubResource("TileSetAtlasSource_ym2ry")
 
 [node name="Game" type="Node2D"]
@@ -307,4 +308,4 @@ tile_map_data = PackedByteArray("AAD1/wAAAAAKAAEAAAAKAAAAAAATAAEAAAAGAAAAAAASAAE
 tile_set = SubResource("TileSet_33mpf")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_je5ht")]
-position = Vector2(0, -40)
+position = Vector2(0, -88)

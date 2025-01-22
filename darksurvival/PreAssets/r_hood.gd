@@ -44,14 +44,14 @@ func _physics_process(delta: float) -> void:
 		#landing.start()
 		#timer.start()
 		
-	
+	#attacking Hitbox
 	if animation.get_frame() in [2, 3, 4, 9, 10,11, 16, 17, 18] and state == 1:
 		hitbox.disabled = false
 	else:
 		hitbox.disabled = true
 
 	
-	#print(str(state))
+	print(str(state))
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -64,13 +64,13 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_pressed("ui_left"):
 		capsule.scale = Vector2(-1.0, 1.0)
 
-
+	#Attack animation
 	if Input.is_action_pressed("attack") and is_on_floor():
 		animation.play("attack")
 		state = 1
 	elif state == 1:
 		state = 0
-
+	#Fall and landing animations
 	if is_on_floor() and fall_state == 2:
 		animation.play("landing")
 
@@ -79,15 +79,15 @@ func _physics_process(delta: float) -> void:
 		
 	if jump_var == false and is_on_floor() == false:
 		animation.play("fall")
-
+	#Movement
 	elif direction and state not in  [1, 3, 4]:
 		velocity.x = direction * SPEED
-
+	#Movement animation
 		if is_on_floor():
 				animation.play("run")
 				if state != 2:
 					state = 5
-
+	#death
 	elif state == 4:
 		animation.play("ded")
 
