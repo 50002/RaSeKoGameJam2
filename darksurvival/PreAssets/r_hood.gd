@@ -155,7 +155,7 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 	state = 3
 	animation.play("hort")
 	Health -= 1
-	hp.text == "Health" + str(Health)
+	hp.text = "Health: " + str(Health)
 	print(str(Health))
 	$Flip/AnimatedSprite2D/hurtbox/CollisionShape2D.disabled == true
 	if Health > 0:
