@@ -19,6 +19,7 @@ var state = 0
 #state 4 = death
 #state 5 = movement to fix idle
 
+
 @onready var hp: Label = $Health
 
 @onready var animation: AnimatedSprite2D = $Flip/AnimatedSprite2D
@@ -54,7 +55,7 @@ func _physics_process(delta: float) -> void:
 		hitbox.disabled = true
 
 	
-	print(str(state))
+	#print(str(state))
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -156,7 +157,6 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 	animation.play("hort")
 	Health -= 1
 	hp.text = "Health: " + str(Health)
-	print(str(Health))
 	$Flip/AnimatedSprite2D/hurtbox/CollisionShape2D.disabled == true
 	if Health > 0:
 		i_frames.start()

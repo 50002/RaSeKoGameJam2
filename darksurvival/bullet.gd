@@ -6,7 +6,7 @@ func _ready() -> void:
 	#ei kääny
 	lock_rotation == true
 	#liike
-	linear_velocity = Vector2(0.0, 100.0).rotated(rotation)*-1.0
+	linear_velocity = Vector2(0.0, 150.0).rotated(rotation)*-1.0
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
