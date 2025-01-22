@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://1y0i5gq6vd85"]
+[gd_scene load_steps=21 format=3 uid="uid://cnye8t1qcrqj"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_ch4bq"]
+[ext_resource type="Texture2D" uid="uid://xw7puoatdoh0" path="res://Space Background.png" id="2_budj5"]
 [ext_resource type="Texture2D" uid="uid://cm6vagujdg7q2" path="res://PreAssets/Agis/Agis.png" id="2_yx6gw"]
 
 [sub_resource type="GDScript" id="GDScript_x8a7b"]
@@ -139,15 +140,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ch4bq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.14832, 0.0316215, 0.152085, 1)
-metadata/_edit_use_anchors_ = true
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(1313, 438)
+texture = ExtResource("2_budj5")
 
 [node name="EXIT" type="Button" parent="."]
 layout_mode = 0

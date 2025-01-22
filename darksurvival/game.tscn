@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://cdhlmspr1q7iy"]
+[gd_scene load_steps=12 format=4 uid="uid://cdhlmspr1q7iy"]
 
 [ext_resource type="Texture2D" uid="uid://ckbgmihmh5sku" path="res://PreAssets/free.png" id="1_iar4r"]
 [ext_resource type="Script" path="res://game.gd" id="1_n621x"]
+[ext_resource type="Texture2D" uid="uid://xw7puoatdoh0" path="res://Space Background.png" id="2_8v7at"]
 [ext_resource type="PackedScene" uid="uid://dekojcd44bhjd" path="res://PreAssets/RHood.tscn" id="2_je5ht"]
-[ext_resource type="PackedScene" uid="uid://dblx01t2nn4r0" path="res://six_shot.tscn" id="2_mlph4"]
-[ext_resource type="PackedScene" uid="uid://buyueaw6dfu1" path="res://kill.tscn" id="3_hoj7u"]
-[ext_resource type="PackedScene" uid="uid://camk6c00ydsl1" path="res://Agis.tscn" id="5_mqyhg"]
+[ext_resource type="PackedScene" path="res://six_shot.tscn" id="2_mlph4"]
+[ext_resource type="PackedScene" path="res://kill.tscn" id="3_hoj7u"]
+[ext_resource type="PackedScene" uid="uid://d0cvqhnes0rav" path="res://Agis.tscn" id="5_mqyhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym2ry"]
 texture = ExtResource("1_iar4r")
@@ -312,6 +313,10 @@ point_count = 7
 [node name="Game" type="Node2D"]
 script = ExtResource("1_n621x")
 boolets = ExtResource("2_mlph4")
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(-20, -228)
+texture = ExtResource("2_8v7at")
 
 [node name="Agis" parent="." instance=ExtResource("5_mqyhg")]
 position = Vector2(-1, -81)
