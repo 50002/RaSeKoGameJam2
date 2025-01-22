@@ -8,7 +8,7 @@ var fall_state = 0
 #1 = tiny
 #2 = big
 var jump_var = false
-
+var score 
 var Health = 3
 var state = 0
 #state -1 = startup
@@ -30,10 +30,11 @@ var state = 0
 @onready var hurtbox: Area2D = $Flip/AnimatedSprite2D/hurtbox
 @onready var i_frames: Timer = $Flip/AnimatedSprite2D/hurtbox/iFrames
 @onready var dt: Timer = $Flip/AnimatedSprite2D/hurtbox/deathTimer
+@onready var score_ui: Label = $Camera2D/scoreUI
 
 
 func _ready() -> void:
-	pass
+	score = get_parent().get_node("Score")
 
 func _physics_process(delta: float) -> void:
 	if state == 4:
@@ -175,3 +176,7 @@ func _on_death_timer_timeout() -> void:
 	
 		
 	
+
+
+func _on_score_timeout() -> void:
+	score_ui.text = ("Score: " + str(get_parent().Score))

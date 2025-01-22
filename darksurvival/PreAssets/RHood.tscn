@@ -1884,6 +1884,13 @@ one_shot = true
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
+[node name="scoreUI" type="Label" parent="Camera2D"]
+offset_left = -287.0
+offset_top = -161.0
+offset_right = -182.0
+offset_bottom = -135.0
+text = "Score: 0"
+
 [node name="Landing" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
