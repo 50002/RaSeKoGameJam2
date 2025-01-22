@@ -170,6 +170,7 @@ text = "Start"
 position = Vector2(576, 152)
 sprite_frames = SubResource("SpriteFrames_p5o10")
 animation = &"idle"
+autoplay = "idle"
 
 [connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="START" to="." method="_on_start_pressed"]
