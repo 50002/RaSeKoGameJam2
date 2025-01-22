@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnye8t1qcrqj"]
+[gd_scene load_steps=20 format=3 uid="uid://1y0i5gq6vd85"]
 
-[ext_resource type="PackedScene" uid="uid://d0cvqhnes0rav" path="res://Agis.tscn" id="1_8ipu7"]
 [ext_resource type="Script" path="res://start_screen.gd" id="1_ch4bq"]
+[ext_resource type="Texture2D" uid="uid://cm6vagujdg7q2" path="res://PreAssets/Agis/Agis.png" id="2_yx6gw"]
 
 [sub_resource type="GDScript" id="GDScript_x8a7b"]
 script/source = "extends Button
@@ -16,6 +16,119 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 "
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kks1s"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(0, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wink"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(224, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r2wd"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(448, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7i26"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(672, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kctid"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(896, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgv0y"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(1120, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eau36"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(1344, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qarnf"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(1568, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6qwv"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(1792, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65xo2"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(2016, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvqva"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(2240, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5ggj"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(2464, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cqox"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(2688, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbqxp"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(2912, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0vmc"]
+atlas = ExtResource("2_yx6gw")
+region = Rect2(3136, 0, 224, 240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p5o10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kks1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wink")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r2wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7i26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kctid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgv0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eau36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qarnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6qwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65xo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvqva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5ggj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cqox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbqxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0vmc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
 
 [node name="Start screen" type="Control"]
 layout_mode = 3
@@ -36,9 +149,6 @@ grow_vertical = 2
 color = Color(0.14832, 0.0316215, 0.152085, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Agis" parent="ColorRect" instance=ExtResource("1_8ipu7")]
-position = Vector2(584, 215)
-
 [node name="EXIT" type="Button" parent="."]
 layout_mode = 0
 offset_left = 494.0
@@ -55,6 +165,11 @@ offset_top = 305.0
 offset_right = 673.0
 offset_bottom = 344.0
 text = "Start"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 152)
+sprite_frames = SubResource("SpriteFrames_p5o10")
+animation = &"idle"
 
 [connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="START" to="." method="_on_start_pressed"]
