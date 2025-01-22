@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ckbgmihmh5sku" path="res://PreAssets/free.png" id="1_iar4r"]
 [ext_resource type="Script" path="res://game.gd" id="1_n621x"]
 [ext_resource type="PackedScene" uid="uid://dekojcd44bhjd" path="res://PreAssets/RHood.tscn" id="2_je5ht"]
-[ext_resource type="PackedScene" path="res://kill.tscn" id="3_hoj7u"]
-[ext_resource type="PackedScene" uid="uid://d0cvqhnes0rav" path="res://Agis.tscn" id="5_mqyhg"]
+[ext_resource type="PackedScene" uid="uid://buyueaw6dfu1" path="res://kill.tscn" id="3_hoj7u"]
+[ext_resource type="PackedScene" uid="uid://camk6c00ydsl1" path="res://Agis.tscn" id="5_mqyhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym2ry"]
 texture = ExtResource("1_iar4r")
