@@ -1,8 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://camk6c00ydsl1"]
+[gd_scene load_steps=43 format=3 uid="uid://d0cvqhnes0rav"]
 
 [ext_resource type="Texture2D" uid="uid://cm6vagujdg7q2" path="res://PreAssets/Agis/Agis.png" id="1_1os55"]
 [ext_resource type="Script" path="res://agis.gd" id="1_moplt"]
-[ext_resource type="PackedScene" uid="uid://db052i0nc4s0" path="res://bullet.tscn" id="3_kugab"]
+[ext_resource type="PackedScene" path="res://bullet.tscn" id="3_kugab"]
 [ext_resource type="Texture2D" uid="uid://bcohi3leo2rxg" path="res://PreAssets/Agis/Particle FX 1.2 Free/Spritesheets/Gravity-Sheet.png" id="4_2qufk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yerjx"]
