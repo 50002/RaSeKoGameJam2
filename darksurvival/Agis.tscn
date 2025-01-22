@@ -1,0 +1,170 @@
+[gd_scene load_steps=22 format=3 uid="uid://d0cvqhnes0rav"]
+
+[ext_resource type="Texture2D" uid="uid://cm6vagujdg7q2" path="res://PreAssets/Agis/Agis.png" id="1_1os55"]
+[ext_resource type="Script" path="res://agis.gd" id="1_moplt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yerjx"]
+size = Vector2(19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kks1s"]
+atlas = ExtResource("1_1os55")
+region = Rect2(0, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wink"]
+atlas = ExtResource("1_1os55")
+region = Rect2(224, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r2wd"]
+atlas = ExtResource("1_1os55")
+region = Rect2(448, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7i26"]
+atlas = ExtResource("1_1os55")
+region = Rect2(672, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kctid"]
+atlas = ExtResource("1_1os55")
+region = Rect2(896, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgv0y"]
+atlas = ExtResource("1_1os55")
+region = Rect2(1120, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eau36"]
+atlas = ExtResource("1_1os55")
+region = Rect2(1344, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qarnf"]
+atlas = ExtResource("1_1os55")
+region = Rect2(1568, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6qwv"]
+atlas = ExtResource("1_1os55")
+region = Rect2(1792, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65xo2"]
+atlas = ExtResource("1_1os55")
+region = Rect2(2016, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvqva"]
+atlas = ExtResource("1_1os55")
+region = Rect2(2240, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5ggj"]
+atlas = ExtResource("1_1os55")
+region = Rect2(2464, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cqox"]
+atlas = ExtResource("1_1os55")
+region = Rect2(2688, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbqxp"]
+atlas = ExtResource("1_1os55")
+region = Rect2(2912, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0vmc"]
+atlas = ExtResource("1_1os55")
+region = Rect2(3136, 0, 224, 240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sam27"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kks1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wink")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r2wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7i26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kctid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgv0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eau36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qarnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6qwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65xo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvqva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5ggj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cqox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbqxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0vmc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mylbm"]
+radius = 183.674
+
+[sub_resource type="GDScript" id="GDScript_fpres"]
+script/source = "extends CollisionShape2D
+
+var speed = 60
+var player_chase = false
+var player = null
+var health = 5
+var state = 0
+
+@onready var hitbox: CollisionShape2D = $attack/CollisionShape2D
+
+func _physics_process(delta: float) -> void:
+	if state == 0:
+		if player_chase:
+			position.x += (player.position.x - position.x)/speed
+			
+
+
+
+func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	player = body
+	player_chase = true
+"
+
+[node name="Agis" type="CharacterBody2D"]
+script = ExtResource("1_moplt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(0.5, -3)
+shape = SubResource("RectangleShape2D_yerjx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_sam27")
+animation = &"idle"
+frame_progress = 0.196932
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mylbm")
+script = SubResource("GDScript_fpres")
+
+[connection signal="body_shape_entered" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_body_shape_exited"]

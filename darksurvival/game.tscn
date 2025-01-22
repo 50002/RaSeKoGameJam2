@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://cdhlmspr1q7iy"]
+[gd_scene load_steps=9 format=4 uid="uid://cdhlmspr1q7iy"]
 
 [ext_resource type="Texture2D" uid="uid://ckbgmihmh5sku" path="res://PreAssets/free.png" id="1_iar4r"]
 [ext_resource type="Script" path="res://game.gd" id="1_n621x"]
 [ext_resource type="PackedScene" uid="uid://dekojcd44bhjd" path="res://PreAssets/RHood.tscn" id="2_je5ht"]
-[ext_resource type="PackedScene" uid="uid://buyueaw6dfu1" path="res://kill.tscn" id="3_hoj7u"]
+[ext_resource type="PackedScene" path="res://kill.tscn" id="3_hoj7u"]
+[ext_resource type="PackedScene" uid="uid://d0cvqhnes0rav" path="res://Agis.tscn" id="5_mqyhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ym2ry"]
 texture = ExtResource("1_iar4r")
@@ -303,6 +304,9 @@ size = Vector2(96, 5)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_n621x")
+
+[node name="Agis" parent="." instance=ExtResource("5_mqyhg")]
+position = Vector2(-1, -81)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_33mpf")
