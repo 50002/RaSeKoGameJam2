@@ -10,6 +10,7 @@ func _ready() -> void:
 	player = get_parent().get_node("CharacterBody2D")
 	
 
+#makes it follow the player
 func _physics_process(delta: float) -> void:
 	$AnimatedSprite2D.play("idle")
 	if state == 0:
@@ -19,3 +20,4 @@ func _physics_process(delta: float) -> void:
 
 func _on_attack_timeout() -> void:
 	pass
+	

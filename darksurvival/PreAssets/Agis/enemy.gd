@@ -1,3 +1,4 @@
+#doesnt do anything is only here for reference
 extends CharacterBody2D
 
 var speed = 60

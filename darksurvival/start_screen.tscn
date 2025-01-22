@@ -141,7 +141,7 @@ grow_vertical = 2
 script = ExtResource("1_ch4bq")
 
 [node name="SpaceBackground" type="Sprite2D" parent="."]
-position = Vector2(1313, 438)
+position = Vector2(-186, 8)
 texture = ExtResource("2_budj5")
 
 [node name="EXIT" type="Button" parent="."]

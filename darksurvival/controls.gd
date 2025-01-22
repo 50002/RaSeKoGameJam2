@@ -6,7 +6,6 @@ extends Control
 func _ready() -> void:
 	timer.start()
 
-
-
+#changes files after time runs out in timer
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://game.tscn")

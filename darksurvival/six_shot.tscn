@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://dblx01t2nn4r0"]
+[gd_scene load_steps=27 format=3 uid="uid://dhigfwof0stt8"]
 
-[ext_resource type="PackedScene" uid="uid://db052i0nc4s0" path="res://bullet.tscn" id="1_84kb1"]
+[ext_resource type="PackedScene" uid="uid://dx7pk1cr7evji" path="res://bullet.tscn" id="1_84kb1"]
 [ext_resource type="Script" path="res://six_shot.gd" id="1_xb3lm"]
 [ext_resource type="Texture2D" uid="uid://bcohi3leo2rxg" path="res://PreAssets/Agis/Particle FX 1.2 Free/Spritesheets/Gravity-Sheet.png" id="2_r7iq6"]
 [ext_resource type="Texture2D" uid="uid://blay6pohrrpac" path="res://PreAssets/Agis/Particle FX 1.2 Free/Spritesheets/Splatter-Sheet.png" id="4_a45tf"]
@@ -166,20 +166,26 @@ script = ExtResource("1_xb3lm")
 
 [node name="bullet" parent="." instance=ExtResource("1_84kb1")]
 rotation = -3.14159
+script = null
 
 [node name="bullet2" parent="." instance=ExtResource("1_84kb1")]
 rotation = -2.09439
+script = null
 
 [node name="bullet3" parent="." instance=ExtResource("1_84kb1")]
 rotation = -1.0472
+script = null
 
 [node name="bullet4" parent="." instance=ExtResource("1_84kb1")]
 rotation = 2.0944
+script = null
 
 [node name="bullet5" parent="." instance=ExtResource("1_84kb1")]
+script = null
 
 [node name="bullet6" parent="." instance=ExtResource("1_84kb1")]
 rotation = 1.0472
+script = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_eiy1k")

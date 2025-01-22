@@ -31,7 +31,7 @@ offset_left = 401.0
 offset_top = 591.0
 offset_right = 732.0
 offset_bottom = 649.0
-text = "CLICK HERE TO RETURN TO TRY AGAIN"
+text = "CLICK HERE  TO TRY AGAIN"
 
 [connection signal="pressed" from="BACK" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="AGAIN" to="." method="_on_again_pressed"]

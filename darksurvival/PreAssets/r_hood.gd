@@ -150,7 +150,7 @@ func _on_smoother_jump_timeout() -> void:
 func _on_startup_timeout() -> void:
 	state = 0
 
-
+#makes it so you can take damage
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	state = 3
 	animation.play("hort")
